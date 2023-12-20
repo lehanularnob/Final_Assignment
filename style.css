@@ -1,0 +1,187 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+.navbar {
+    background-color: #007bff;
+    padding: 10px;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Round shape and animation for search box */
+#countryInput {
+    border: 2px solid #17a2b8;
+    border-radius: 25px;
+    padding: 20px; /* Increase padding for a larger box */
+    font-size: 18px; /* Increase font size for better visibility */
+    transition: width 0.3s, border-radius 0.3s, padding 0.3s, font-size 0.3s;
+}
+
+#countryInput:focus {
+    width: 300px;
+    border-radius: 15px;
+    padding: 15px; /* Adjust padding on focus if needed */
+    font-size: 16px; 
+}
+
+.search-icon {
+    margin-left: -30px;
+    cursor: pointer;
+}
+#searchButton {
+    border: none;
+    border-radius: 50%; /* Make it round */
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #007bff;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: #454d55; /* Dark card background color */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title,
+.card-text {
+    color: #fff; /* Light text color */
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.footer {
+    background-color: #343a40; /* Dark background color */
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animation for card entry */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.row .col-md-4 {
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Weather Details and Forecast Styling */
+.weather-details,
+.forecast-details,
+.forecast-card {
+    border: 1px solid #17a2b8; /* Add border */
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s, border 0.3s; /* Add border animation */
+}
+
+.weather-details:hover,
+.forecast-details:hover,
+.forecast-card:hover {
+    transform: scale(1.05);
+    border-color: #fff; /* Change border color on hover */
+}
+
+/* Animation for border */
+@keyframes borderAnimation {
+    from {
+        border-color: transparent;
+    }
+    to {
+        border-color: #17a2b8;
+    }
+}
+
+.weather-details,
+.forecast-details,
+.forecast-card {
+    animation: borderAnimation 0.3s ease-in-out;
+}
+
+.weather-details h5,
+.forecast-details h5 {
+    color: #17a2b8;
+    margin-bottom: 20px;
+}
+
+.weather-details p,
+.forecast-details p {
+    margin-bottom: 10px;
+}
+
+.forecast-details .card {
+    background-color: #343a40;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.forecast-details .card:hover {
+    transform: scale(1.05);
+}
+
+.forecast-details .card-subtitle {
+    color: #17a2b8;
+}
+
+.forecast-details .card-text {
+    margin-bottom: 10px;
+}
+
+.weather-details img,
+.forecast-details img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.weather-icon {
+    margin-top: 10px;
+}
+
+/* Additional styling for forecast cards */
+.forecast-card {
+    background-color: #454d55;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    height: 100%;
+}
+
+.forecast-card:hover {
+    transform: scale(1.05);
+}
